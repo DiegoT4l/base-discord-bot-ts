@@ -1,4 +1,4 @@
-# discord-bot-ts
+# base-discord-bot-ts
 
 To clone the repository:
 
