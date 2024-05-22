@@ -1,15 +1,23 @@
 {
   "name": "base-discord-bot-ts",
-  "module": "dist/index.js",
-  "type": "module",
   "version": "1.0.0",
   "description": "A Discord bot written in TypeScript",
+  "type": "module",
+  "module": "dist/index.js",
   "scripts": {
     "start": "bun run .",
     "dev": "tsx watch src/index.ts",
     "build": "tsc",
     "clean": "rm -rf dist && echo 'dist folder killed.'"
-  },bun
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "typescript",
+    "bun.js"
+  ],
+  "author": "DiegoT4l",
+  "license": "MIT",
   "devDependencies": {
     "@types/bun": "^1.1.3",
     "@types/node": "^20.12.12",
