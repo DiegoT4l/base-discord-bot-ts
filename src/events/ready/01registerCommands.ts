@@ -21,7 +21,7 @@ module.exports = async (client: object) => {
             if (existingCommand) {
                 if (command.deleted) {
                     await applicationCommands.delete(existingCommand.id);
-                    console.log(`Deleted command: ${name}`);
+                    console.log(`🧹 Deleted command: ${name}`);
                     continue;
                 }
 
@@ -30,7 +30,7 @@ module.exports = async (client: object) => {
                         description,
                         options,
                     });
-                    console.log(`Edited command: ${name}`);
+                    console.log(`✏️ Edited command: ${name}`);
                 }
             } else {
                 if (command.deleted) {
