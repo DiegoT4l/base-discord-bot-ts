@@ -1,8 +1,12 @@
 const path = require('path');
 const getAllFiles = require('./getAllFiles');
 
-module.exports = (exceptions = []) => {
-    let localCommands: Array<string> = [];
+interface Command {
+    name: string;
+}
+
+module.exports = (exceptions: string[] = []): Command[] => {
+    let localCommands: Command[] = [];
 
     const commandCategories = getAllFiles(
         path.join(__dirname, '..', 'commands'),
