@@ -2,8 +2,9 @@ const { ApplicationCommandOptionType, PermissionFlagsBits } = require('discord.j
 
 module.exports = {
 
+    deleted: false,
     name: 'ban',
-    description: 'ban a user from the server',
+    description: 'ban a user!!!',
     options: [
         {
             name: 'user',
@@ -19,10 +20,13 @@ module.exports = {
         },
     ],
     permissionsRequired: [
-        PermissionFlagsBits.BanMembers,
+        PermissionFlagsBits.BanMembers
+    ],
+    botPermissions: [
+        PermissionFlagsBits.BanMembers
     ],
 
-    async execute(client: any, interaction: any) {
+    execute: async (client: any, interaction: any) => {
         await interaction.reply({
             content: 'Banning user...',
             ephemeral: true,
